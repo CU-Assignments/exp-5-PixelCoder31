@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class SumUsingAutoboxing {
+
+    
+    public static Integer parseInteger(String str) {
+        return Integer.parseInt(str); // Converts string to Integer
+    }
+
+    
+    public static int calculateSum(List<Integer> numbers) {
+        int sum = 0;
+        
+        for (Integer number : numbers) {
+            sum += number; 
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+      
+        String[] stringNumbers = {"10", "20", "30", "40", "50"};
+
+        List<Integer> integerList = new ArrayList<>();
+        for (String str : stringNumbers) {
+            integerList.add(parseInteger(str)); 
+        }
+
+      
+        int totalSum = calculateSum(integerList); 
+
+        
+        System.out.println("The sum of the numbers is: " + totalSum);
+    }
+}
